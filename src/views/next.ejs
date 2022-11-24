@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <title>Session y Cookies</title>
+  </head>
+  <body">
+    <div class="container">
+      <h3> Hola <%= locals.user.nombre %></h3>
+      <h4>Elegiste el color: <%= locals.user.colores %></h4>
+      <h4>Tenes <%= locals.user.edad ? locals.user.edad : "N/A" %></h4>
+      <h4>Tu correo electronico es:
+        <%= locals.user.email %></h4>
+    
+      <a href="/">Volver al Inicio</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <title>Session y Cookies</title>
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="col-md-12">
+        <form action="" method="post">
+          <h1>Session y Cookies</h1>
+
+          <fieldset class="form">
+            <div>
+              <label for="name">Ingrese su Nombre (requerido).:</label>
+              <input type="text" id="name" name="nombre" />
+              <p class="form_error">
+                <%= locals.errors && errors.nombre ? errors.nombre.msg : null%>
+              </p>
+            </div>
+            <div>
+              <label for="email">Ingrese su Email (requerido).:</label>
+              <input type="email" id="mail" name="email" />
+              <p class="form_error">
+                <%= locals.errors && errors.email ? errors.email.msg : null%>
+              </p>
+            </div>
+            <div>
+              <label for="edad">Ingrese su Edad (opcional):</label>
+              <input type="number" id="edad" name="edad" />
+              <p class="form_error">
+                <%= locals.errors && errors.edad ? errors.edad.msg : null%>
+              </p>
+            </div>
+            <div>
+              <label for="color">Elija un Color:</label>
+              <select id="color" name="colores">
+                <option value="" selected disabled>Colores</option>
+                <option value="blue">Azul</option>
+
+                <option value="green">Verde</option>
+                <option value="red">Rojo</option>
+              </select>
+              <p class="form_error">
+                <%= locals.errors && errors.colores ? errors.colores.msg :
+                null%>
+              </p>
+            </div>
+            <input
+              type="checkbox"
+              id="recordar"
+              value="si"
+              name="recordar"
+            /><label class="light" for="recordar">Recordar color</label>
+          </fieldset>
+
+          <button class="olvidar" type="submit">Enviar</button>
+        </form>
+        <a href="/borrar">
+          <button class="olvidar">Olvidar el Color</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
